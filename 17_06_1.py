@@ -1,23 +1,23 @@
-def count_word_frequency(sentence):
+def count_word_frequency(naxadasutyun):
     symbols = '''!"#$%&'()*,.:;<=>?@[\]^_`{|}~'''
 
-    for char in sentence:
+    for char in naxadasutyun:
         if char in symbols:
-            sentence = sentence.replace(char, "")
+            naxadasutyun = naxadasutyun.replace(char, "")
 
-    words = sentence.lower().split()
+    words = naxadasutyun.lower().split()
 
-    word_frequency = {}
+    word_dict = {}
 
     for word in words:
-        if word in word_frequency:
-            word_frequency[word] += 1
+        if word in word_dict:
+            word_dict[word] += 1
         else:
-            word_frequency[word] = 1
+            word_dict[word] = 1
 
-    for word in sorted(word_frequency):
-        print(f"{word}: {word_frequency[word]}")
+    for word in sorted(word_dict):
+        print(f"{word}: {word_dict[word]}")
 
-sentence = input()
+naxadasutyun = input("Greq naxadasutyun@: ")
 
-count_word_frequency(sentence)
+count_word_frequency(naxadasutyun)
