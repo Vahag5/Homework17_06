@@ -8,15 +8,22 @@ def contacts():
 "if you want exit the program press: '4'\n")
         if q == '1':
             n = input("name: ")
-            p = input("phone_number ")
+            p = input("phone_number: ")
             print('Contact added successfully!')
-            phone_book['name'] = n
-            phone_book['phone_number'] = p
+            phone_book[n] = n
+            phone_book[n] = p
         elif q == '2':
-        elif q == '3':   
-        else: 
-             break  
+            c = input("Enter name: ")
+            print("Phone number:",phone_book.get(c,"false name"))
+        elif q == '3':  
+            print("Contacts:")
+            for i in phone_book:
+                print(f"{i} :{phone_book[i]}")
+        elif q == '4':
+            print("Goodbye!")
+            break  
+        else:
+            continue
         
     return phone_book
 contacts()
-print(phone_book)
