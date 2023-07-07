@@ -18,7 +18,7 @@ def contacts():
         elif q == '3':  
             print("Contacts:")
             for i in phone_book:
-                print(f"{i} :{phone_book[i]}")
+                print(f"{i}: {phone_book[i]}")
         elif q == '4':
             print("Goodbye!")
             break  
